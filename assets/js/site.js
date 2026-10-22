@@ -65,13 +65,15 @@
   $('[data-cal]').innerHTML = cells;
 
   /* ---------- Map + places ---------- */
+  const trip = (p) => (p.walk ? `${p.walk} min walk` : `${p.drive} min drive`);
+  const away = (p) => (p.km < 1 ? `${Math.round(p.km * 1000)} m` : `${p.km} km`);
   const mapsUrl = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
   $('[data-places]').innerHTML = S.places.map((p) => `
     <li class="place" id="place-${p.id}">
       <div class="place-head">
         <i class="dot dot-${p.kind}" aria-hidden="true"></i>
         <h3>${esc(p.name)}</h3>
-        <span class="place-dist">${p.km} km · ${p.drive} min drive</span>
+        <span class="place-dist">${away(p)} · ${trip(p)}</span>
       </div>
       <p>${esc(p.about)}</p>
       ${p.picks ? `<ul class="picks">${p.picks.map((k) => `<li><strong>${esc(k.name)}</strong> ${esc(k.note)}</li>`).join('')}</ul>` : ''}
@@ -104,7 +106,7 @@
       const side = cx <= EDGE.x ? 'e' : cx >= width - EDGE.x ? 'w' : cy <= EDGE.top ? 's' : 'n';
       return `<a class="pin pin-edge pin-${p.kind}" href="#place-${p.id}" transform="translate(${cx.toFixed(1)} ${cy.toFixed(1)})">
         <path d="M14 0 L-8 -11 L-3 0 L-8 11 Z" transform="rotate(${angle.toFixed(0)})"/>
-        ${label(`${p.name} · ${p.drive} min`, side)}</a>`;
+        ${label(`${p.name} · ${p.walk || p.drive} min`, side)}</a>`;
     });
 
     const [hx, hy] = project(S.home);

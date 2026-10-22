@@ -45,7 +45,8 @@ window.SITE = {
   home: { name: 'The flat', lat: -34.16110, lng: 22.10805, label: 'w' },
 
   // Map pins and the list under the map, nearest first. kind: beach | food | see.
-  // label = which side of the pin the name sits on (n, s, e, w). Drive times are from the house.
+  // label = which side of the pin the name sits on (n, s, e, w). Drive times are from the house;
+  // use walk (minutes) instead of drive for places guests reach on foot.
   places: [
     // {
     //   id: 'museum', name: 'Town Museum', kind: 'see', lat: -34.18, lng: 22.14, label: 'w',
@@ -56,14 +57,14 @@ window.SITE = {
     // },
     {
       id: 'diaz-beach', name: 'Diaz Beach', kind: 'beach', lat: -34.16110, lng: 22.11060, label: 'e',
-      km: 0.4, drive: 2,
-      about: 'The beach closest to the flat, about a 6-minute walk away, and a favourite with surfers.',
+      km: 0.15, walk: 2,
+      about: 'The beach closest to the flat, through a side entrance the maps don’t show, and a favourite with surfers.',
       query: 'Diaz Beach Mossel Bay',
     },
     {
       id: 'water-park', name: 'Diaz Water Park', kind: 'see', lat: -34.15937, lng: 22.10923, label: 'n',
-      km: 0.4, drive: 1,
-      about: 'Slides, super tubes, a lazy river and a kiddies’ pool next to the Diaz Hotel, about a 6-minute walk away. It is seasonal and closes in bad weather, so phone 044 692 8400 before you go.',
+      km: 0.2, walk: 3,
+      about: 'Slides, super tubes, a lazy river and a kiddies’ pool next to the Diaz Hotel, through the same side entrance. It is seasonal and closes in bad weather, so phone 044 692 8400 before you go.',
       picks: [{ name: 'Bahia Bleu', note: 'restaurant in the Diaz Hotel, with a veranda looking out to sea' }],
       query: 'Diaz Water Park Mossel Bay',
     },
