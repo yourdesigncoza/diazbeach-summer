@@ -28,7 +28,7 @@ window.SITE = {
     { src: 'lounge', caption: 'Lounge, through to the kitchen' },
     { src: 'lounge-balcony', caption: 'Lounge, with doors onto the balcony' },
     { src: 'lounge-tv', caption: 'Smart TV in the lounge' },
-    { src: 'sleeper-couch', caption: 'Sleeper couch, with the air-conditioner above the balcony door' },
+    { src: 'sleeper-couch', caption: 'Sleeper couch in the lounge, sleeps two' },
     { src: 'desk', caption: 'A desk in the corner of the lounge' },
     { src: 'kitchen', caption: 'Kitchen with a breakfast counter' },
     { src: 'kitchen-fridge', caption: 'Fridge, microwave, dishwasher and washing machine' },
