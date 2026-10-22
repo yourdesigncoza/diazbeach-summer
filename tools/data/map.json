@@ -1,0 +1,18 @@
+{
+  "title": "Map of Diaz Beach showing the flat and nearby places",
+  "bbox": [
+    22.099,
+    -34.187,
+    22.161,
+    -34.142
+  ],
+  "trails": [],
+  "labels": [
+    {
+      "text": "Mossel Bay",
+      "x": 700,
+      "y": 330,
+      "class": "sea-label"
+    }
+  ]
+}
